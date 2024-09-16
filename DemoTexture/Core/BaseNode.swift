@@ -6,7 +6,7 @@
 //
 
 import AsyncDisplayKit
-
+//Analogous to UIView
 class BaseNode : ASDisplayNode{
     override init() {
         super.init()
