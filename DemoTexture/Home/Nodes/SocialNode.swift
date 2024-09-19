@@ -44,5 +44,10 @@ class SocialNode: BaseNode {
         likesButtonNode.setImage(UIImage(resource: .likes), for: .normal)
         commentsButtonNode.setImage(UIImage(resource: .comments), for: .normal)
         bookmarkButtonNode.setImage(UIImage(resource: .bookmark), for: .normal)
+        
+        shareButtonNode.addTarget(self, action: #selector(shareButtonPressed), forControlEvents: .touchUpInside)
+    }
+    @objc func shareButtonPressed(){
+        self.shareButtonNode.backgroundColor = .green
     }
 }

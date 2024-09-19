@@ -10,11 +10,15 @@ import AsyncDisplayKit
 
 class NewsFeedCell: BaseCellNode {
     let headerNode = HeaderNode()
-    let imageNode = FeedImageNode()
+    var imageNode : OverlaySocialNode!
     let socialNode = SocialNode()
-    override init() {
+    init(dataOfVideo : String) {
         super.init()
         self.automaticallyManagesSubnodes = true
+        
+        let imageNode = OverlaySocialNode(dataOfVideo: dataOfVideo)
+        self.imageNode = imageNode
+      
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
